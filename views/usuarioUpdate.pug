@@ -1,0 +1,24 @@
+extends ./layouts/index 
+
+block contenido
+    main.container.mt-2
+        h1= pagina
+        .row.mt-5
+            .col-md-10
+                form(action='usuarios/id')
+                .mb-3
+                    label.form-label(for='nombre') Nombre
+                    input#nombre.form-control(type='text' value= resultado.nombre)
+                .mb-3
+                    label.form-label(for='email') Email
+                    input#email.form-control(type='email' value= resultado.email)
+                //- .mb-3
+                //-     label.form-label(for='password') Password
+                //-     input#password.form-control(type='password' p= resultado.password)
+                button.btn.btn-primary(type='submit') Actualizar
+
+
+                //- p= resultado.id
+                //- p= resultado.nombre
+                //- p= resultado.email
+                //- p= resultado.password
